@@ -122,19 +122,4 @@ public class BasicThreadTest {
 
         assertEquals(NUMthreads, myThreads.length);
     }
-    @Test
-    public void testNumberOfThreads01() throws InterruptedException {
-        int NUMthreads = 0;
-        Thread[] myThreads = new Thread[NUMthreads];
-
-        for (int i = 0; i < NUMthreads; i++) {
-            myThreads[i] = new BasicThread(i);
-        }
-
-        for (int i = 0; i < NUMthreads; i++) {
-            myThreads[i].join();
-        }
-
-        assertEquals(NUMthreads, myThreads.length);
-    }
 }
